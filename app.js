@@ -87,14 +87,14 @@ galleryContainer.innerHTML = galleryMarkup;
 galleryContainer.addEventListener("click", onGalleryClick);
 
 function onGalleryClick(event) {
+
   event.preventDefault();
 
-  const target = event.target;
-  if (target.nodeName !== "IMG") return;
+  const target =event.target;
+  if (target.nodeName !== "IMG");
+  openModal (target.dataset.source,target.alt);
 
-  openModal(target.dataset.source, target.alt);
 }
-
 function openModal(src, alt) {
   modal.classList.add("is-open");
   modalImage.src = src;
