@@ -66,7 +66,7 @@ const gallery = [
 ];
 
 const galleryContainer = document.querySelector(".js-gallery");
-const modal = document.querySelector(".js-lightbox");
+const modal = document.querySelector(".lightbox");
 const modalImage = document.querySelector(".lightbox__image");
 const closeModalBtn = document.querySelector('[data-action="close-lightbox"]');
 const overlay = document.querySelector(".lightbox__overlay");
@@ -91,7 +91,7 @@ function onGalleryClick(event) {
   event.preventDefault();
 
   const target =event.target;
-  if (target.nodeName !== "IMG");
+  if (target.nodeName !== "IMG") return;
   openModal (target.dataset.source,target.alt);
 
 }

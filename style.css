@@ -10,7 +10,7 @@ body {
     flex-wrap: wrap;
     list-style: none;
     padding: 0;
-    gap: 10px;
+   
   }
   
  .gallery__item {
@@ -29,7 +29,9 @@ body {
     border-radius: 5px;
     transition: transform 0.3s ease-in-out;
   }
-  
+  .gallery__item{
+    margin: 5px;
+  }
   .gallery__image:hover {
     transform: scale(1.1);
   }
@@ -60,6 +62,7 @@ body {
   .lightbox__image {
     max-width: 100%;
     max-height: 100%;
+    
   }
   
   .lightbox__button {
