@@ -65,11 +65,13 @@ const gallery = [
   },
 ];
 
+
 const galleryContainer = document.querySelector(".js-gallery");
 const modal = document.querySelector(".lightbox");
 const modalImage = document.querySelector(".lightbox__image");
 const closeModalBtn = document.querySelector('[data-action="close-lightbox"]');
 const overlay = document.querySelector(".lightbox__overlay");
+
 
 const galleryMarkup = gallery
   .map(
@@ -120,24 +122,28 @@ let currentIndex = 0;
 function onKeyPress(event) {
   if (event.code === "Escape") {
     closeModal();
+
   } else if (event.code === "ArrowRight") {
     nextImage();
+
   } else if (event.code === "ArrowLeft") {
     prevImage();
   }
+
+
 }
 
 function nextImage() {
   currentIndex = (currentIndex + 1) % gallery.length;
   updateModalImage();
-}
+};
 
 function prevImage() {
   currentIndex = (currentIndex - 1 + gallery.length) % gallery.length;
   updateModalImage();
-}
+};
 
 function updateModalImage() {
   modalImage.src = gallery[currentIndex].original;
   modalImage.alt = gallery[currentIndex].description;
-}
+};
